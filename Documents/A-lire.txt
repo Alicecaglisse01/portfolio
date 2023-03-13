@@ -1,0 +1,27 @@
+Bienvenue sur mon Portfolio.
+
+Ce portfolio reproduit le bureau d'un ordinateur windows.
+
+Sur le bureau il y a différents icones :
+- Google : qui ouvre des projets hébergés sur des serveurs distant
+- Explorateur de fichiers dans lequel se trouve tous mes fichiers
+- Visual studio code.
+
+
+Dans l'explorateur de fichiers il y a plusieurs Dossiers :
+
+Vous trouverez dans les documents :
+
+- Mon CV
+- Le Rapport de stage de première année effectuée au sein de la start-up Tailor
+- Le Rapport de stage de deuxième année effectuée au sein de cette même start-up.
+- Cette note
+
+Vous trouverez dans Images :
+
+- Tous les langages de programmation et autre que je maitrise
+- d'autres truc rigolos
+
+
+Vous trouverez dans Videos :
+- La vidéo de présentation d'un projet "Briolage".
