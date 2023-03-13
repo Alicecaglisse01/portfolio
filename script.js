@@ -44,6 +44,8 @@ fileExplorer.addEventListener("dblclick", () => {
   const windowContentListEl = document.createElement("div");
   windowContentListEl.classList.add("window-content-list");
 
+  windowContentListEl.style.cursor = "pointer";
+
   const folders = [
     "Documents",
     "Téléchargements",
@@ -97,13 +99,15 @@ fileExplorer.addEventListener("dblclick", () => {
 
         const files = [
           "Cv.pdf",
-          "lettre_de_motivation.docx",
+          "Rapport-de-stage-Tailor-Alice-Moisan.pdf",
+          "Rapport-de-stage-Alice-MOISAN.pdf",
+          "Epreuve-E4.pdf",
           "projet_final.ppt",
-          "notes.txt",
+          "A-lire.txt",
         ];
         const fileIcons = {
           pdf: "Images/pdf.png",
-          docx: "Images/word.png",
+          xls: "Images/excel.png",
           ppt: "Images/powerpoint.png",
           txt: "Images/text.png",
         };
@@ -121,6 +125,7 @@ fileExplorer.addEventListener("dblclick", () => {
           const fileItemSpanEl = document.createElement("span");
           fileItemSpanEl.textContent = file;
 
+          fileItemImageEl.style.cursor = "pointer";
           fileItemEl.appendChild(fileItemImageEl);
           fileItemEl.appendChild(fileItemSpanEl);
           fileListEl.appendChild(fileItemEl);
@@ -166,6 +171,211 @@ fileExplorer.addEventListener("dblclick", () => {
               cvPdfEl.width = "100%";
               cvPdfEl.height = "100%";
 
+              cvContentEl.style.backgroundColor = "#A44021";
+
+              cvContentEl.appendChild(cvPdfEl);
+
+              cvWindowEl.appendChild(cvHeaderEl);
+              cvWindowEl.appendChild(cvContentEl);
+
+              document.body.appendChild(cvWindowEl);
+            });
+          }
+          if (file === "Rapport-de-stage-Alice-MOISAN.pdf") {
+            fileItemEl.addEventListener("dblclick", () => {
+              // Create a new window
+              const cvWindowEl = document.createElement("div");
+              cvWindowEl.classList.add("window");
+              cvWindowEl.style.border = "solid 3px #A44021";
+
+              const cvHeaderEl = document.createElement("div");
+              cvHeaderEl.classList.add("window-header");
+              cvHeaderEl.style.backgroundColor = "#202020";
+
+              const cvTitleEl = document.createElement("div");
+              cvTitleEl.classList.add("window-header-title");
+              cvTitleEl.textContent = "Rapport de stage 2ème annèe";
+              cvTitleEl.style.backgroundColor = "#4D4D4D";
+              cvTitleEl.style.borderTopRightRadius = "10px 10px";
+              cvTitleEl.style.borderTopLeftRadius = "10px 10px";
+              cvTitleEl.style.paddingLeft = "10px";
+              cvTitleEl.style.paddingRight = "10px";
+              cvTitleEl.style.color = "white";
+
+              const cvCloseEl = document.createElement("div");
+              cvCloseEl.classList.add("window-header-close");
+              cvCloseEl.innerHTML = '<span class="material-icons">close</span>';
+              cvCloseEl.addEventListener("click", () => {
+                cvWindowEl.remove();
+                cvHeaderEl.remove();
+              });
+
+              cvHeaderEl.appendChild(cvTitleEl);
+              cvHeaderEl.appendChild(cvCloseEl);
+
+              const cvContentEl = document.createElement("div");
+              cvContentEl.classList.add("window-content");
+
+              const cvPdfEl = document.createElement("embed");
+              cvPdfEl.src = "Documents/Rapport-de-stage-Alice-MOISAN.pdf";
+              cvPdfEl.type = "application/pdf";
+              cvPdfEl.width = "100%";
+              cvPdfEl.height = "100%";
+
+              cvContentEl.style.backgroundColor = "#A44021";
+
+              cvContentEl.appendChild(cvPdfEl);
+
+              cvWindowEl.appendChild(cvHeaderEl);
+              cvWindowEl.appendChild(cvContentEl);
+
+              document.body.appendChild(cvWindowEl);
+            });
+          }
+          if (file === "Rapport-de-stage-Tailor-Alice-Moisan.pdf") {
+            fileItemEl.addEventListener("dblclick", () => {
+              // Create a new window
+              const cvWindowEl = document.createElement("div");
+              cvWindowEl.classList.add("window");
+              cvWindowEl.style.border = "solid 3px #A44021";
+
+              const cvHeaderEl = document.createElement("div");
+              cvHeaderEl.classList.add("window-header");
+              cvHeaderEl.style.backgroundColor = "#202020";
+
+              const cvTitleEl = document.createElement("div");
+              cvTitleEl.classList.add("window-header-title");
+              cvTitleEl.textContent = "Rapport de stage 1ère annèe";
+              cvTitleEl.style.backgroundColor = "#4D4D4D";
+              cvTitleEl.style.borderTopRightRadius = "10px 10px";
+              cvTitleEl.style.borderTopLeftRadius = "10px 10px";
+              cvTitleEl.style.paddingLeft = "10px";
+              cvTitleEl.style.paddingRight = "10px";
+              cvTitleEl.style.color = "white";
+
+              const cvCloseEl = document.createElement("div");
+              cvCloseEl.classList.add("window-header-close");
+              cvCloseEl.innerHTML = '<span class="material-icons">close</span>';
+              cvCloseEl.addEventListener("click", () => {
+                cvWindowEl.remove();
+                cvHeaderEl.remove();
+              });
+
+              cvHeaderEl.appendChild(cvTitleEl);
+              cvHeaderEl.appendChild(cvCloseEl);
+
+              const cvContentEl = document.createElement("div");
+              cvContentEl.classList.add("window-content");
+
+              const cvPdfEl = document.createElement("embed");
+              cvPdfEl.src =
+                "Documents/Rapport-de-stage-Tailor-Alice-Moisan.pdf";
+              cvPdfEl.type = "application/pdf";
+              cvPdfEl.width = "100%";
+              cvPdfEl.height = "100%";
+
+              cvContentEl.style.backgroundColor = "#A44021";
+              cvContentEl.appendChild(cvPdfEl);
+
+              cvWindowEl.appendChild(cvHeaderEl);
+              cvWindowEl.appendChild(cvContentEl);
+
+              document.body.appendChild(cvWindowEl);
+            });
+          }
+          if (file === "A-lire.txt") {
+            fileItemEl.addEventListener("dblclick", () => {
+              // Create a new window
+              const cvWindowEl = document.createElement("div");
+              cvWindowEl.classList.add("window");
+              cvWindowEl.style.border = "solid 3px #A44021";
+
+              const cvHeaderEl = document.createElement("div");
+              cvHeaderEl.classList.add("window-header");
+              cvHeaderEl.style.backgroundColor = "#202020";
+
+              const cvTitleEl = document.createElement("div");
+              cvTitleEl.classList.add("window-header-title");
+              cvTitleEl.textContent = "A lire";
+              cvTitleEl.style.backgroundColor = "#4D4D4D";
+              cvTitleEl.style.borderTopRightRadius = "10px 10px";
+              cvTitleEl.style.borderTopLeftRadius = "10px 10px";
+              cvTitleEl.style.paddingLeft = "10px";
+              cvTitleEl.style.paddingRight = "10px";
+              cvTitleEl.style.color = "white";
+
+              const cvCloseEl = document.createElement("div");
+              cvCloseEl.classList.add("window-header-close");
+              cvCloseEl.innerHTML = '<span class="material-icons">close</span>';
+              cvCloseEl.addEventListener("click", () => {
+                cvWindowEl.remove();
+                cvHeaderEl.remove();
+              });
+
+              cvHeaderEl.appendChild(cvTitleEl);
+              cvHeaderEl.appendChild(cvCloseEl);
+
+              const cvContentEl = document.createElement("div");
+              cvContentEl.classList.add("window-content");
+
+              const cvPdfEl = document.createElement("embed");
+              cvPdfEl.src = "Documents/A-lire.txt";
+              cvPdfEl.type = "application/pdf";
+              cvPdfEl.width = "100%";
+              cvPdfEl.height = "100%";
+
+              cvContentEl.style.backgroundColor = "#A44021";
+
+              cvContentEl.appendChild(cvPdfEl);
+
+              cvWindowEl.appendChild(cvHeaderEl);
+              cvWindowEl.appendChild(cvContentEl);
+
+              document.body.appendChild(cvWindowEl);
+            });
+          }
+          if (file === "Epreuve-E4.pdf") {
+            fileItemEl.addEventListener("dblclick", () => {
+              // Create a new window
+              const cvWindowEl = document.createElement("div");
+              cvWindowEl.classList.add("window");
+              cvWindowEl.style.border = "solid 3px #A44021";
+
+              const cvHeaderEl = document.createElement("div");
+              cvHeaderEl.classList.add("window-header");
+              cvHeaderEl.style.backgroundColor = "#202020";
+
+              const cvTitleEl = document.createElement("div");
+              cvTitleEl.classList.add("window-header-title");
+              cvTitleEl.textContent = "Epreuve E4";
+              cvTitleEl.style.backgroundColor = "#4D4D4D";
+              cvTitleEl.style.borderTopRightRadius = "10px 10px";
+              cvTitleEl.style.borderTopLeftRadius = "10px 10px";
+              cvTitleEl.style.paddingLeft = "10px";
+              cvTitleEl.style.paddingRight = "10px";
+              cvTitleEl.style.color = "white";
+
+              const cvCloseEl = document.createElement("div");
+              cvCloseEl.classList.add("window-header-close");
+              cvCloseEl.innerHTML = '<span class="material-icons">close</span>';
+              cvCloseEl.addEventListener("click", () => {
+                cvWindowEl.remove();
+                cvHeaderEl.remove();
+              });
+
+              cvHeaderEl.appendChild(cvTitleEl);
+              cvHeaderEl.appendChild(cvCloseEl);
+
+              const cvContentEl = document.createElement("div");
+              cvContentEl.classList.add("window-content");
+
+              const cvPdfEl = document.createElement("embed");
+              cvPdfEl.src = "Documents/Epreuve-E4.pdf";
+              cvPdfEl.type = "application/pdf";
+              cvPdfEl.width = "100%";
+              cvPdfEl.height = "100%";
+
+              cvContentEl.style.backgroundColor = "#A44021";
               cvContentEl.appendChild(cvPdfEl);
 
               cvWindowEl.appendChild(cvHeaderEl);
